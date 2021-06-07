@@ -21,5 +21,10 @@ export default class P2cParentComponent extends LightningElement {
     ];
     handleKeyUp(event){
         this.progressBar = event.target.value;
+    }
+    handleClick(event){
+        this.template.querySelector('c-p2c-slider-component').reset();
+        /*this.template.querySelector('.main').textContent
+        this.template.querySelector('.conName:first-child')*/
     } 
 }
