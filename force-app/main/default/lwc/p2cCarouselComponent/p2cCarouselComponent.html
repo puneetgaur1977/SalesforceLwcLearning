@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-07-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-07-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+   <lightning-card  title="Lightning Non Primitive Datatype Communication">
+       <div class="slds-var-m-around_medium">
+        <lightning-carousel disable-auto-scroll> 
+            <template for:each={carouselData} for:item="carousel">
+                    <lightning-carousel-image
+                        key={carousel.header}
+                        src ={carousel.src} 
+                        header ={carousel.header}
+                        description ={carousel.description}>
+                    </lightning-carousel-image>>
+            </template>
+        </lightning-carousel>
+       </div>
+   </lightning-card> 
+</template>
