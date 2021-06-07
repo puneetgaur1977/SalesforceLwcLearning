@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-06-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-06-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+   <lightning-card  title="Dynamic CSS">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" name="input1" label="Percentage" onkeyup={handleInput} value={percent}></lightning-input>
+            <!--type in (date, datetime, time, color, file,
+                         text, email, password, tel, url, number,
+                         checkbox, checkbox-button, toggle, search)-->
+            <div style={percentage} class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+
+                Hey I am an Alert!!!!
+            </div>
+        </div>
+   </lightning-card> 
+</template>

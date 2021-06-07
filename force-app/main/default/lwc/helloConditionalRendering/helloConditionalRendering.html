@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-05-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-05-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+   <lightning-card  title="Conditional Rendering">
+        <div class="slds-var-m-top_medium">
+            <lightning-button 
+                variant="brand" 
+                label="Show Data" 
+                title="Save" 
+                onclick={handleClick} 
+                class="slds-var-m-left_x-small"
+            ></lightning-button>
+            <template if:true={isVisible}>
+                <div>Welcome to Hero Series</div>
+            </template>
+            <template if:false={isVisible}>
+                <div class="slds-m-around_medium">You can not see data , please click on show data button</div>
+            </template>
+            <lightning-input type="text" name="input1" label="Type hello to see the data" onkeyup={changeHandler}></lightning-input>
+            <!--type in (date, datetime, time, color, file,
+                         text, email, password, tel, url, number,
+                         checkbox, checkbox-button, toggle, search)-->
+            <template if:true={isHelloString}>
+                <div class="slds-m-around_medium">You have typed correctly!!!!</div>
+            </template>
+            
+        </div>
+   </lightning-card> 
+</template>

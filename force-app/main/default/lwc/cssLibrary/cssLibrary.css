@@ -1,0 +1,12 @@
+.wrapper{
+    width:100%;
+    color:var(--lwc-brandAccessible);
+    background:var(--lwc-brandContrast);
+}
+.skills{
+    text-align : right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background:crimson;
+    color:green
+}

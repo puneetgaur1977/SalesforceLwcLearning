@@ -1,0 +1,63 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-05-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-05-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+   <lightning-card  title="Quiz App">
+        <div class="slds-var-m-around_medium">
+            <template if:true={isSubmitted}>
+                <div class={isScoredFull}>You have scored {correctAnswer} out of {myQuestions.length}</div>
+            </template>
+            <form>
+            <template for:each={myQuestions} for:item="quiz">
+                <div key={quiz.id} class="slds-var-m-bottom_medium">
+                    <div>
+                        <strong>
+                            {quiz.id} - {quiz.Question}
+                        </strong>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-var-p-bottom_medium">
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="a" onchange={changeHandler} />
+                            {quiz.answers.a} 
+                        </div>
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="b" onchange={changeHandler} />
+                            {quiz.answers.b} 
+                        </div>
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="c" onchange={changeHandler} />
+                            {quiz.answers.c} 
+                        </div>
+                     </div>
+                </div>
+            </template>
+            <lightning-button 
+                variant="brand" 
+                label="Submit" 
+                type="Submit" 
+                title="Submit Quiz" 
+                onclick={handleSubmit} 
+                disabled={allNotSelected}
+                class="slds-m-around_small">
+            </lightning-button>
+            <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+            <lightning-button 
+                variant="brand" 
+                label="Reset" 
+                type="reset" 
+                title="Reset Quiz" 
+                onclick={handleReset} 
+                class="slds-m-around_small">
+            </lightning-button>
+            <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+        </form>
+        </div>
+   </lightning-card> 
+</template>
