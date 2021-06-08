@@ -9,9 +9,20 @@
   1.0   06-07-2021   gaur.puneet@outlook.com   Initial Version
 -->
 <template>
-   <lightning-card  title="Lightning Card">
-    <div class="slds-var-m-around_medium">
-      <c-slot-child-demo></c-slot-child-demo>
+   <lightning-card  title="Slot Demo">
+    <div class="slds-var-p-around_medium">
+      <c-slot-child-demo>
+        <p slot="first">I am Salesforce</p>
+        <p class="slds-text-color_error" slot="second">25</p>
+        <p slot="footer">I am footer</p>
+      </c-slot-child-demo>
+    </div>
+    <div class="slds-var-p-around_medium">
+      <c-slot-child-demo>
+        <p slot="first">I am Salesforce</p>
+        <p class="slds-text-color_error" slot="second">25</p>
+       <!-- <p slot="footer">I am footer</p>-->
+      </c-slot-child-demo>
     </div>
    </lightning-card> 
 </template>

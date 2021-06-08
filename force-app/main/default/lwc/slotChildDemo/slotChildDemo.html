@@ -11,7 +11,13 @@
 <template>
   <lightning-card  title="Lightning Card">
     <div class="slds-var-m-around_medium">
-      <p>I am in the child component</p>
+      <p>What is your name?</p>
+      <div><slot name="first"></slot></div> <!--unnamed slot-->
+      <p>What is your age</p>
+      <div><slot name="second"></slot></div>
     </div>
+    <footer class="slds-card__footer slds-hide">
+      <slot name="footer" onslotchange={handleSlotChange}></slot>
+    </footer>
    </lightning-card> 
 </template>
