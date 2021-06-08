@@ -1,0 +1,38 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-07-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-07-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <article class="slds-card">
+        <!--Header Data-->
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <div class="slds-card__header-link slds-truncate" >
+                            <slot name="title"></slot>
+                        </div>
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <slot name="actions"></slot>
+                </div>
+            </header>
+        </div>
+        <!--Body-->
+        <div class="slds-card__body">
+            <slot></slot>
+        </div>
+        <!--Footer-->
+        <footer class="slds-card__footer slds-hide">
+            <slot name="footer" onslotchange={slotFooterHandler}></slot>
+        </footer>
+        
+    </article>
+</template>
