@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-09-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-09-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Navigate New Record">
+        <lightning-button variant="brand" label="New Record" title="Save" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        
+        <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+    </lightning-card>
+    <lightning-card  title="Navigate New Record With default Value">
+        <lightning-button variant="brand" label="New Record With Default Value" title="Save" onclick={handleClickWithDefault} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+    navigateToListView
+    <lightning-card  title="Navigate to ListView">
+        <lightning-button variant="brand" label="Navigate To List View" title="Save" onclick={navigateToListView} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+    <lightning-card  title="Navigate to File">
+        <lightning-button variant="brand" label="Navigate To File" title="Save" onclick={navigateToFile} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>
