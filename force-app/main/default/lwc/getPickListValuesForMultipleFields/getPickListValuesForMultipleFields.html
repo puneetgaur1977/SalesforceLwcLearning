@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-11-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-11-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Get Multiple Picklist With Single Wire Method">
+        <div class="slds-var-p-around_medium">
+           
+            <lightning-combobox
+                   name="Industry"
+                   label="Industry"
+                   value={selectedIndustry}
+                   placeholder="Select Industry"
+                   options={industryOptions}
+                   onchange={handleChange}>
+            </lightning-combobox>
+        </div>
+        <div class="slds-var-p-around_medium">
+         <p>Picklist Value</p>
+             <lightning-combobox
+                 name="Type"
+                 label="Type"
+                 value={selectedType}
+                 placeholder="Select Type"
+                 options={typeOptions}
+                 onchange={handleChange}>
+             </lightning-combobox>
+         </div>
+        <div>
+            <p>Selected Industry={selectedIndustry}</p>
+            <p>Selected Type={selectedType}</p>
+        </div>
+    </lightning-card>
+</template>
