@@ -1,0 +1,58 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-10-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-10-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Record Form">
+       <lightning-record-form
+          object-api-name={objectName}
+          fields={fieldList}
+          onsuccess={successHandler}>
+       </lightning-record-form>
+    </lightning-card>
+    <lightning-card  title="Display Record Form">
+        <lightning-record-form
+           object-api-name={objectName}
+           record-id={recordId}
+           fields={fieldList}
+           mode="view"
+           onsuccess={successHandler}>
+        </lightning-record-form>
+     </lightning-card>
+     <lightning-card  title="Display Record Read Only ">
+        <lightning-record-form
+           object-api-name={objectName}
+           record-id={recordId}
+           fields={fieldList}
+           mode="readonly"
+           onsuccess={successHandler}>
+        </lightning-record-form>
+     </lightning-card>
+     <lightning-card  title="Display Record Read Only ">
+        <lightning-record-form
+           object-api-name={objectName}
+           record-id={recordId}
+           fields={fieldList}
+           mode="edit"
+           columns="2"
+           onsuccess={successHandler}>
+        </lightning-record-form>
+     </lightning-card>
+     <lightning-card  title="Edit Record With Page Layout">
+        <lightning-record-form
+           object-api-name={objectName}
+           record-id={recordId}
+           fields={fieldList}
+           mode="edit"
+           columns="2"
+           layout-type="Compact"
+           onsuccess={successHandler}>
+        </lightning-record-form>
+     </lightning-card>
+</template>
