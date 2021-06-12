@@ -1,0 +1,60 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-12-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-12-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Lightning Card">
+        <div class="slds-var-p-around_medium">
+                <lightning-combobox
+                    name="Type"
+                    label="Type"
+                    value={selectedType}
+                    placeholder="Select Type"
+                    options={typeOptions}
+                    onchange={handleTypeChange}>
+                </lightning-combobox>
+        </div>
+        <div class = "slds-var-m-around_medium">
+            <template if:true={result}>
+                <!-- <template for:each={result} for:item="account"> -->
+                    <!-- <div class="slds-box slds-box_xx-small" key={account.Id}>
+                        <p><strong>Name :</strong>{account.Name}</p>
+                        <p><strong>Type :</strong>{account.Type}</p>
+                        <p><strong>Industry :</strong>{account.Industry}</p>
+                    </div> -->
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_resizable-cols">
+                      <thead>
+                          <tr>
+                              <th>Id</th>
+                              <th>Name</th>
+                              <th>Type</th>
+                              <th>Industry</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <template for:each={result} for:item="account">
+                              <tr key={account.Id}>
+                                  <td class="slds-cell-wrap">{account.Id}</td>
+                                  <td class="slds-cell-wrap">{account.Name}</td>
+                                  <td class="slds-cell-wrap">{account.newType}</td>
+                                  <td class="slds-cell-wrap">{account.Industry}</td>
+                              </tr>
+                          </template>
+                      </tbody>
+                  </table>
+                <!-- </template> -->
+            </template>
+            <template if:false={result}>
+                <div class="slds-var-m-around_medium">
+                    <p><strong>No Data Is available</strong></p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
