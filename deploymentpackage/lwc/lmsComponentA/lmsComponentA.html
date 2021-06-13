@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-08-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-08-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="LWC LMS Component A">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" name="input1" label="Enter a Message" onkeyup={handleMessage} ></lightning-input>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="brand" label="Brand" title="Save" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+        </div>
+    </lightning-card>
+</template>

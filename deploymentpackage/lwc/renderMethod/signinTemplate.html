@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  title="Sign In Template">
+        <div class="slds-var-m-around_medium">
+        <h2 class="slds-text-heading_medium slds-var-m-bottom_medium">Sign In Form</h2>
+        <lightning-input type="text" name="input1" label="Email Id" ></lightning-input>
+        <lightning-input type="password" name="input1" label="Password" ></lightning-input>
+        <lightning-button variant="brand" label="Sign In" title="Sign In" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="neutral" label="Cancel" title="Cancel" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+        <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+    </lightning-card>
+</template>

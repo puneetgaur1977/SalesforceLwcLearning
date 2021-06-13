@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-11-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-11-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Get Nav Items Demo">
+       <p>Get Nav Item Demo</p>
+       <template if:true={result}>
+           <div>Developer Name - {result.developerName}</div>
+           <div>objectApiName - {result.objectApiName}</div>
+           <div>pageReference - {result.pageReference.type}</div>
+       </template>
+    </lightning-card>
+</template>

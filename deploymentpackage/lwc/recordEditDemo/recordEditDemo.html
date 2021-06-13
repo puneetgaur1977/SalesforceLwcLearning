@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-10-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-10-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Record Edit Form">
+    <div class="slds-var-m-around_medium">
+       <lightning-record-edit-form
+          record-id={recordId}
+          object-api-name={objectName}>
+          <div class="slds-box">
+              <label class="slds-var-p-left_x-small">Select your Account name:</label>
+              <lightning-input-field variant="label-hidden" field-name={fields.accountField}>
+              </lightning-input-field>
+              <lightning-input-field field-name={fields.nameField}>
+              </lightning-input-field>
+              <lightning-input-field field-name={fields.titleField}>
+            </lightning-input-field>
+            <lightning-input-field field-name={fields.phoneField}>
+            </lightning-input-field>
+            <lightning-input-field field-name={fields.emailField}>
+            </lightning-input-field>
+            <lightning-button variant="neutral" label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Save" type="Submit" class="slds-m-left_x-small"></lightning-button>
+            <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+            <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+          </div>
+       </lightning-record-edit-form>
+    </div>
+    </lightning-card>
+</template>

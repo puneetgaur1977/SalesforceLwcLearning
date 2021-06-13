@@ -1,0 +1,48 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-06-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-06-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+   <lightning-card  title="Life Cycle-Parent">
+      <!--<h3 slot="title">
+              <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+                  Custom Lightning Card Title
+          </h3>-->
+      <lightning-button label="New" slot="actions"></lightning-button>
+      <div class="slds-var-m-around_medium">
+        <template if:false={isVisibleChild}>
+            <lightning-button 
+            variant="brand" 
+            label="Show Child" 
+            title="Show Child" 
+            onclick={handleClick} 
+            class="slds-m-left_x-small">
+        </lightning-button>
+        </template>
+        <template if:true={isVisibleChild}>
+            <lightning-button 
+            variant="brand" 
+            label="Remove Child" 
+            title="Remove Child" 
+            onclick={handleClick} 
+            class="slds-m-left_x-small">
+        </lightning-button>
+        </template>
+       
+      </div>
+      <template if:true={isChildVisible}>
+        <c-lwc-child-component-life-cycle></c-lwc-child-component-life-cycle>
+      </template>
+
+      <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+     
+      <!-- <lightning-input type="text" name="input1" label="Enter a String" onkeyup={changeHandler} ></lightning-input> -->
+
+   </lightning-card> 
+</template>

@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-10-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-10-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Record Edit Form With Custom Input">
+       <div class="slds-var-m-around_medium">
+           <lightning-record-edit-form 
+           object-api-name={objectName}
+           onsubmit={handleSubmit}
+           onsuccess={successHandler} 
+           onerror={handleError}>
+            <lightning-input label="Name"
+            value={inputValue}
+            onkeyup={handleChange}
+            class="slds-m-bottom_x-small"></lightning-input>
+            <lightning-button class="slds-m-top_small" type="submit" label="Create Account">
+                
+            </lightning-button>
+        </lightning-record-edit-form>
+       </div>
+    </lightning-card>
+</template>

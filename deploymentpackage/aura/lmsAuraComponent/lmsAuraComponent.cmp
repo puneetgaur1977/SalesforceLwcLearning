@@ -1,0 +1,38 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-08-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-08-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+<aura:attribute name="messageValue" type="String" default="optionalDefault" />
+<aura:attribute name="messageReceive" type="String" default="optionalDefault" />
+<lightning:messageChannel 
+    type="SampleMessageChannel__c"
+    aura:id="SampleMessageChannel"
+    onMessage="{!c.handleMessage}"
+    scope="APPLICATION"
+    ></lightning:messageChannel>
+    <lightning:card title="LMS Aura Component-Publish" footer="optionalFooter">
+        <div class="slds-var-m-around_medium">
+            <!-- <label>Enter Your Name</label> -->
+            <lightning:input type="text" name="name" label="Enter Your Name" 
+            value="{!v.messageValue}"
+            onkeyup="{!c.inputHandler}"
+            />
+        </div>
+        <div class="slds-var-m-around_medium">
+            <lightning:button variant="base" label="Publish" title="title" onclick="{! c.publishMessage }"/>
+        </div>
+    </lightning:card>
+    <lightning:card title="LMS Aura Component-Receive" footer="optionalFooter">
+    
+        <h1 class="slds-p-horizontal_small">
+           Message Received- {!v.messageReceive}
+        </h1>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-11-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-11-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card title="Update Record With updateRecord Adaptor"> 
+        <div class="slds-var-p-around_medium">
+            <lightning-datatable
+                key-field=Id
+                data={contacts}
+                columns={columnsName}
+                draft-values={draftValues}
+                onsave={handleSave}
+                hide-checkbox-column>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

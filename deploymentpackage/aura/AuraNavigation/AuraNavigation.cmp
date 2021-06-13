@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-09-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-09-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<aura:component implements="flexipage:availableForAllPageTypes, lightning:isUrlAddressable" access="global">
+    <aura:attribute name="Id" type="String" default="" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <div class="slds-card">
+        <div>Value From LWC - {!v.Id}</div>
+    </div>
+</aura:component>	

@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-11-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-11-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Create New Record Form Demo">
+       <div class="slds-var-m-around_medium">
+           <form class="createForm">
+               <lightning-input label="First Name" name="FirstName" onchange={changeHandle} class="slds-var-m-bottom_x-small" ></lightning-input>
+               <lightning-input label="Last Name" name="LastName" onchange={changeHandle} class="slds-var-m-bottom_x-small" ></lightning-input>
+               <lightning-input label="Title" name="Title" onchange={changeHandle} class="slds-var-m-bottom_x-small" ></lightning-input>
+               <lightning-input label="Phone" type="tel" name="Phone" onchange={changeHandle} class="slds-var-m-bottom_x-small" ></lightning-input>
+               <lightning-input label="Email" type="email" name="Email" onchange={changeHandle} class="slds-var-m-bottom_x-small" ></lightning-input>
+                <lightning-button variant="brand" label="Create Account" title="Save" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+           </form>
+       </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-12-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-12-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Delete Record Demo">
+       <form class="inputForm">
+           <div class="slds-var-m-around_medium">
+           <lightning-input type="text" name="recordId" label="Record Id" onchange={changeHandler}
+           class="slds-m-bottom_x-small"></lightning-input>
+           <lightning-button variant="brand" label="Delete Record" title="deleteRecord" onclick={handleClick} value={recordId} class="slds-m-left_x-small"></lightning-button>
+           <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+           <!--type in (date, datetime, time, color, file,
+                        text, email, password, tel, url, number,
+                        checkbox, checkbox-button, toggle, search)-->
+                    </div>
+       </form>
+    </lightning-card>
+</template>

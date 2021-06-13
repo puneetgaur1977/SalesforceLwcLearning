@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-10-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-10-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Custom Validation in Lightning record Edit Form">
+       <lightning-record-edit-form record-id={recordId}
+                                    object-api-name={objectName}>
+               <lightning-messages></lightning-messages>
+               <lightning-output-field field-name={fields.accountName}>
+               </lightning-output-field>
+               <lightning-input-field field-name={fields.annualRevenue}>
+               </lightning-input-field>
+               <lightning-input-field field-name={fields.billingAdd}>
+               </lightning-input-field>
+               <lightning-input-field field-name={fields.phone}>
+               </lightning-input-field>
+               <lightning-button
+                  class="slds-m-top_small"
+                  variant="brand"
+                  type="submit"
+                  name="update"
+                  label="Update">
+               </lightning-button>
+       </lightning-record-edit-form>
+    </lightning-card>
+</template>
