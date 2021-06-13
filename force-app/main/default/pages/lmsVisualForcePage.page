@@ -9,7 +9,7 @@
   1.0   06-08-2021   gaur.puneet@outlook.com   Initial Version
 -->
 <apex:page lightningStylesheets="true">
-    <apex:slds/>
+    <apex:slds />
         <div class="slds-scope">
             <div class="slds-p-around_small">
                 <label>Enter publish message</label>

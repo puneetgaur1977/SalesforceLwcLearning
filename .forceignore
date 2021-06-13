@@ -2,7 +2,7 @@
 # More information: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm
 #
 
-package.xml
+
 
 # LWC configuration files
 **/jsconfig.json
@@ -10,3 +10,15 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+WorkPlanTemplate.My_WorkPlanTemplates
+WorkPlanSelectionRule.My_WorkPlanSelectionRules
+WorkPlan.All_WorkPlans
+WorkPlanSelectionRule.All_WorkPlanSelectionRules
+WorkPlan.My_WorkPlans
+WorkStepTemplate.My_WorkStepTemplates
+WorkPlan.My_RecentWorkPlans
+WorkPlanSelectionRule.My_RecentWorkPlanSelectionRules
+WorkPlanTemplate.My_RecentWorkPlanTemplates
+WorkStepTemplate.My_RecentWorkStepTemplates
+WorkPlanTemplate.All_WorkPlanTemplates
+WorkStepTemplate.All_WorkStepTemplates
