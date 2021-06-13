@@ -37,4 +37,5 @@ export default class WireApexWithParam extends LightningElement {
     generatePickList(data){
         return data.values.map(item =>({label : item.label, value: item.value}));
     }
+    
 }

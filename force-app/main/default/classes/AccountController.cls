@@ -45,6 +45,43 @@ public with sharing class AccountController {
             throw new AuraHandledException(e.getMessage());
         }
     }
+    @AuraEnabled
+    public static List<Account> getImperativeAccountList(){
+        try {
+            return [
+                SELECT
+                    Id,
+                    Name,
+                    Type,
+                    Industry
+                FROM
+                    Account
+                WITH SECURITY_ENFORCED
+            ];
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
+    @AuraEnabled
+    public static List<Account> filterImperativeAccountByType(String account){
+        try {
+            String searchAccount='%'+account+'%';
+            return [
+                SELECT
+                    Id,
+                    Name,
+                    Type,
+                    Industry
+                FROM
+                    Account
+                Where
+                    Name  LIKE :searchAccount
+                WITH SECURITY_ENFORCED
+            ];
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
     public AccountController() {
 
     }

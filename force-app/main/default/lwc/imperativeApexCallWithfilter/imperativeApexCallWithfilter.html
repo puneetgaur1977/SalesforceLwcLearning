@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : gaur.puneet@outlook.com
+  @group             : 
+  @last modified on  : 06-12-2021
+  @last modified by  : gaur.puneet@outlook.com
+  Modifications Log 
+  Ver   Date         Author                    Modification
+  1.0   06-12-2021   gaur.puneet@outlook.com   Initial Version
+-->
+<template>
+    <lightning-card  title="Imperative Method Call With Search">
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                type="search" 
+                name="input1" 
+                label="Search Account"
+                onchange={searchHandler}
+                value={searchKey} 
+                >
+            </lightning-input>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <div key={account.Id}>
+                        <p><strong>Name :</strong>{account.Name}</p>
+                        <p><strong>Type :</strong>{account.Type}</p>
+                        <p><strong>Industry :</strong>{account.Industry}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
